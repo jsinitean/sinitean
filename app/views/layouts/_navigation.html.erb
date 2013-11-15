@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<LINK REL="SHORTCUT ICON" HREF="/favicon.ico" type="image/x-icon"> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Jeremy Sinitean</title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="author" content="Jeremy Sinitean">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<%= stylesheet_link_tag('style', :media => 'all') %>
+<%= stylesheet_link_tag('comments', :media => 'all') %>
+<%= stylesheet_link_tag('elements', :media => 'all') %>
+<%= stylesheet_link_tag('isotope', :media => 'all') %>
+<%= stylesheet_link_tag('lessframework', :media => 'all') %>
+<%= stylesheet_link_tag('nivo-slider', :media => 'all') %>
+<%= stylesheet_link_tag('reset', :media => 'all') %>
+<%= stylesheet_link_tag('superfish', :media => 'all') %>
+<%= stylesheet_link_tag('tweet', :media => 'all') %>
+<%= stylesheet_link_tag('widgets', :media => 'all') %>
+<%= javascript_include_tag :all %> 
+
+</head>
+<header>
+  <!-- header wrapper -->
+  <div class="wrapper cf">
+    <div id="logo"> <a href="index.html" ><img src="/assets/logo.png" alt=""></a> </div>
+  </div>
+  <!-- ENDS header wrapper -->
+  <!-- nav -->
+  <nav class="cf">
+    <div class="wrapper cf">
+      <ul id="nav" class="sf-menu">
+		  
+	  	<% case when current_page?(:action => 'index') %>
+		<li class="current-menu-item"><%= link_to raw("HOME<i><b></b></i>"), controller: "public", action: "index" %></li>
+	  	<% else %>
+		<li><%= link_to raw("HOME<i><b></b></i>"), controller: "public", action: "index" %></li>
+		<% end %>
+		
+		<% case when current_page?(:action => 'experience') %>
+		<li class="current-menu-item"><%= link_to raw("EXPERIENCE<i><b></b></i>"), controller: "public", action: "experience" %></li>
+		<% else %>
+		<li><%= link_to raw("EXPERIENCE<i><b></b></i>"), controller: "public", action: "experience" %></li>
+		<% end %>
+		
+		<% case when current_page?(:action => 'portfolio') %>
+		<li class="current-menu-item"><%= link_to raw("PORTFOLIO<i><b></b></i>"), controller: "public", action: "portfolio" %></li>
+		<% else %>
+		<li><%= link_to raw("PORTFOLIO<i><b></b></i>"), controller: "public", action: "portfolio" %></li>
+		<% end %>
+		
+		<% case when current_page?(:action => 'contact') %>
+		<li class="current-menu-item"><%= link_to raw("CONTACT<i><b></b></i>"), controller: "public", action: "contact" %><i><b></b></i></li>
+		<% else %>
+		<li><%= link_to raw("CONTACT<i><b></b></i>"), controller: "public", action: "contact" %><i><b></b></i> <%= %></li>
+		<% end %>
+		
+      </ul>
+      <div id="combo-holder"></div>
+    </div>
+  </nav>
+  <!-- ends nav -->
+</header>
+
+
+  <%= yield %>
+  
+
+<footer>
+  <!-- wrapper -->
+  <div class="wrapper cf">
+    <!-- social -->
+    <div class="sb-holder cf">
+      <ul id="social-bar" class="cf">
+        <li class="left-corner"><i></i></li>
+		<li><a href="http://www.linkedin.com/profile/view?id=82375474" target="_blank" title="LinkedIn"><img src="/assets/social/LinkedIn.png" alt=""></a></li>
+        <li><a href="https://www.facebook.com/jeremy.sinitean" target="_blank" title="Facebook"><img src="/assets/social/Facebook.png" alt=""></a></li>
+        <li><a href="https://twitter.com/jeremysinitean" target="_blank" title="Twitter"><img src="/assets/social/Twitter.png" alt=""></a></li>
+        <li><a href="https://plus.google.com/110163625054412375358/posts" target="_blank" title="Google+"><img src="/assets/social/Google+.png" alt=""></a></li>
+		<li><a href="https://github.com/jeremysinitean" target="_blank" title="GitHub"><img src="/assets/social/GitHub.png" alt=""></a></li>
+        <li class="right-corner"><i></i></li>
+      </ul>
+    </div>
+    <!-- ENDS social -->
+    <!-- widgets -->
+    <ul  class="widget-cols cf">
+      <li class="first-col">
+        <div class="widget-block">
+          <h4>RECENT POSTS</h4>
+          <div class="recent-post cf"> <a href="#" class="thumb"><img src="/assets/jer1.jpg" alt=""></a>
+            <div class="post-head"> <a href="#">Roommates returning to Iowa City </a><span> November 1, 2013</span> </div>
+          </div>
+          <div class="recent-post cf"> <a href="#" class="thumb"><img src="/assets/jer2.jpg" alt=""></a>
+            <div class="post-head"> <a href="#">Bowling in the Burbs</a><span> September 21, 2013</span> </div>
+          </div>
+          <div class="recent-post cf"> <a href="#" class="thumb"><img src="/assets/jer3.jpg" alt=""></a>
+            <div class="post-head"> <a href="#">First family photo with Piper in her Bears gear</a><span> September 23, 2013</span> </div>
+          </div>
+        </div>
+      </li>
+      <li class="second-col">
+        <div class="widget-block">
+          <h4>ABOUT</h4>
+          <p>Jeremy Sinitean is a Quality Assurance Engineer for NCSA Athletic Recruiting</p>
+          <p>With extensive experience in software development, he is knowledgeable in all assets of the product development lifecycle.</p>
+        </div>
+      </li>
+      <li class="third-col">
+        <div class="widget-block">
+          <div id="tweets" class="footer-col tweet">
+            <h4>TWITTER WIDGET</h4>
+            <ul class="tweet_list">
+              <li class="tweet_first tweet_odd"><span class="tweet_time"><a href="https://twitter.com/jeremysinitean/statuses/188062944318337024" target="_blank">about 12 hours ago</a></span> <span class="tweet_text">Just watched @jgarlin have to convince the ticket taker he was supposed to be in the Vic. Pumped for the show with Guster!</span></li>
+              <li class="tweet_even"><span class="tweet_time"><a href="https://twitter.com/jeremysinitean/statuses/179999952519438339" target="_blank">about a day ago</a></span> <span class="tweet_text">#chidodgeball Makes sense to be #scared of NCSA. After all, "Dodgeball is a sport of violence, exclusion, and degradation." </span></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="fourth-col">
+        <div class="widget-block">
+          <h4>CATEGORIES</h4>
+          <ul>
+            <li class="cat-item"><%= link_to "Home", controller: "public", action: "index" %></li>
+            <li class="cat-item"><%= link_to "Experience", controller: "public", action: "experience" %></li>
+            <li class="cat-item"><%= link_to "Portfolio", controller: "public", action: "portfolio" %></li>
+            <li class="cat-item"><%= link_to "Contact", controller: "public", action: "contact" %></li>
+            <li class="cat-item"><%= link_to "Blog", controller: "public", action: "blog" %></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <!-- ENDS widgets -->
+    <div id="footer-bottom">&copy; Copyright 2013 <a href="#">Jeremy Sinitean</a> All Rights Reserved</div>
+  </div>
+  <!-- ENDS wrapper -->
+</footer>
+</html>
+

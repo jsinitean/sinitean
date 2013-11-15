@@ -1,0 +1,56 @@
+
+<body>
+<!-- HEADER -->
+<!-- ENDS HEADER -->
+<!-- MAIN -->
+<div role="main" id="main">
+  <div class="wrapper">
+    <!-- SLIDER -->
+    <div class="slider-wrapper theme-default theme-project theme-home">
+      <div class="ribbon"></div>
+      <div id="slider" class="nivoSlider"> 
+		  <a href="http://www.sinitix.com" target="_blank"><img src="assets/dummies/slides/02.png" alt=""></a> 
+		  <a href="http://worldbeer.herokuapp.com" target="_blank"><img src="assets/dummies/slides/03.png" alt=""></a> 
+	  </div>
+    </div>
+    <!-- ENDS SLIDER -->
+    <!-- headline -->
+    <div class="headline"> Websites </div>
+    <!-- ENDS headline -->
+    <!-- Feature -->
+    <ul id="filter-container-feature" class="feature">
+      <li> 
+		  <%= link_to image_tag("/assets/dummies/Portfolio.png"), {controller: "public", action: "portfolio"}, {class: "thumb"} %>
+        <div class="caption">Website Portfolio</div>
+      </li>
+      <li> 
+		  <%= link_to image_tag("/assets/dummies/Experience.png"), {controller: "public", action: "experience"}, {class: "thumb"} %>
+        <div class="caption">Relevant Work Experience</div>
+      </li>
+      <li> 
+		  <%= link_to image_tag("/assets/dummies/Contact.png"), {controller: "public", action: "contact"}, {class: "thumb"} %>
+        <div class="caption">Contact Information</div>
+      </li>
+    </ul>
+    <!-- ENDS feature -->
+  </div>
+</div>
+<!-- ENDS MAIN -->
+
+<!-- JavaScript at the bottom for fast page loading -->
+<script src="assets/jquery-1.7.1.min.js"></script>
+<!-- scripts concatenated and minified via build script -->
+<script src="assets/custom.js"></script>
+<!-- superfish -->
+<script src="assets/superfish-1.4.8/js/hoverIntent.js"></script>
+<script src="assets/superfish-1.4.8/js/superfish.js"></script>
+<script src="assets/superfish-1.4.8/js/supersubs.js"></script>
+<!-- ENDS superfish -->
+<script src="assets/modernizr-2.5.3.min.js"></script>
+<script src="assets/jquery.isotope.min.js"></script>
+<script src="assets/jquery.nivo.slider.js"></script>
+<script src="assets/css3-mediaqueries.js"></script>
+<script src="assets/tabs.js"></script>
+<script src="assets/poshytip-1.1/src/jquery.poshytip.min.js"></script>
+<!-- end scripts -->
+</body>
